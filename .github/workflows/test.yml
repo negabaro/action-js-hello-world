@@ -1,0 +1,28 @@
+name: Greet Everyone
+# 이 Workflow는 저장소에 Push가 되면 실행 되도록 한다
+on: [push]
+
+jobs:
+  # Job ID: 문자와 -(대시), _(언더바)로 구성된 Job 고유 식별자
+  build:
+    # 이 Job은 리눅스에서 실행된다
+    runs-on: ubuntu-latest
+    # Job 이름
+    name: Hello
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: run hello action
+        id: hello-action
+        run: node index.js
+        with:
+          who-to-greet: 'World'
+        env:
+          HELLO_ENV: 'Hello Env'
+          HELLO_SECRET: ${{secrets.HELLO_SECRET}}
+      - name: Get the output hello
+        run: echo "res ${{ steps.hello-action.outputs.res }}"
+      - name: Get the output resEnv
+        run: echo "resEnv ${{ steps.hello-action.outputs.resEnv }}"
+      - name: Get the output resSecret
+        run: echo "resSecret ${{ steps.hello-action.outputs.resSecret }}"
