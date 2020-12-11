@@ -59,7 +59,7 @@ World!
 ## Example usage
 
 ```yaml
-uses: actions/action-js-hello-world@master
+uses: negabaro/action-js-hello-world@master
 with:
   hello-text: 'Hello'
 ```
