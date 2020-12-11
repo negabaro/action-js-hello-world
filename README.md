@@ -8,7 +8,7 @@ This code is referenced [hello-world-javascript-action] and "[Creating a JavaScr
 
 ### `hello-text`
 
-**Required** The name of the person to greet. Default `"Hello"`.
+**Required**  Default `"Hello"`.
 
 
 ### env `HELLO_ENV`
@@ -17,7 +17,9 @@ Default `"Hello"`
 
 ### secret `HELLO_SECRET`
 
+Default `""`
 
+The secret key needs to be set on the github settings of dashboard.
 
 
 ## Outputs
