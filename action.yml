@@ -1,15 +1,19 @@
 name: 'Actions js Hello World'
-description: 'Hello World'
+description: 'Hello World!'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  hello-text:  # id of input
+    description: 'Test Message'
     required: true
-    default: 'World'
+    default: 'Hello'
 outputs:
-  hello:
-    description: 'Hello World!!'
-  #time: # id of output
-  #  description: 'The time we greeted you'
+  textResponse:
+    description: 'Hello World!'
+  envResponse:
+    description: 'Hello World!'
+  secretResponse:
+    description: 'Hello World!'
+  arrayResponse:
+    description: 'Hello World!'
 runs:
   using: 'node12'
   main: 'index.js'

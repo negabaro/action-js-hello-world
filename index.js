@@ -1,18 +1,16 @@
 const core = require("@actions/core");
-const github = require("@actions/github");
 
 try {
-  const nameToGreet = core.getInput("who-to-greet");
-  const res = `Hello ${nameToGreet}!`;
-  const resEnv = `env is ${process.env.HELLO_ENV}`;
-  const resSecret = `secret is ${process.env.HELLO_SECRET}`;
-  //console.log(res);
-  core.setOutput("res", res);
-  core.setOutput("resEnv", resEnv);
-  core.setOutput("resSecret", resSecret);
-  // Get the JSON webhook payload for the event that triggered the workflow
-  //const payload = JSON.stringify(github.context.payload, undefined, 2);
-  //console.log(`The event payload: ${payload}`);
+  const helloText = core.getInput("hello-text");
+  const textResponse = `${helloText} World!`;
+  const arrayResponse = [`${helloText}`, "World!"];
+  const envResponse = `${process.env.HELLO_ENV} World!`;
+  const secretResponse = `${process.env.HELLO_SECRET} World!`;
+
+  core.setOutput("arrayResponse", arrayResponse);
+  core.setOutput("textResponse", textResponse);
+  core.setOutput("envResponse", envResponse);
+  core.setOutput("secretResponse", secretResponse);
 } catch (error) {
   core.setFailed(error.message);
 }
