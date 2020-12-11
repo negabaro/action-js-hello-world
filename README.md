@@ -1,8 +1,8 @@
 # Action JS Hello World
 
-This action prints "Hello World!" or the name + "World!" of a person to greet to the log. To learn how this action was built, 
+This action prints "Hello World!" with env,secret,with,etc provided by Workflow of Github Action.
 
-see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
+This code is referenced [hello-world-javascript-action] and "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
 
 ## Inputs
 
@@ -63,5 +63,5 @@ with:
 ---
 
 
-[Link]: https://github.com/actions/hello-world-javascript-action
+[hello-world-javascript-action]: https://github.com/actions/hello-world-javascript-action
 https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/creating-a-javascript-action
