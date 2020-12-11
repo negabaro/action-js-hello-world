@@ -22,6 +22,8 @@ Default `"Hello"`
 
 ## Outputs
 
+The expected output results are as follows.
+
 ### `textResponse`
 
 ```
@@ -62,6 +64,6 @@ with:
 
 ---
 
-
+[action-js-hello-world]: https://github.com/negabaro/action-js-hello-world
 [hello-world-javascript-action]: https://github.com/actions/hello-world-javascript-action
 https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/creating-a-javascript-action
