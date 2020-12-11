@@ -48,7 +48,7 @@ Hello World!
 Hello World!
 ```
 
-if secrets not valid 
+If secret key of `HELLO_SECRET` is not set, it returns as follows. 
 
 ```
 World!
