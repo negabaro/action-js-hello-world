@@ -10,7 +10,8 @@ jobs:
         uses: actions/checkout@master
       - name: run hello action
         id: hello-action
-        run: node index.js
+        #run: node index.js
+        uses: negabaro/action-js-hello-world@master
         with:
           hello-text: 'Hello'
         env:
